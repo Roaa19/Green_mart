@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:greenmart/core/constans/app_image.dart';
 import 'package:greenmart/core/style/color.dart';
+import 'package:greenmart/feature/explore/page/explore_screen.dart';
 import 'package:greenmart/feature/home/page/home_screen.dart';
 
 class MainAppScreen extends StatefulWidget {
@@ -14,8 +15,8 @@ class MainAppScreen extends StatefulWidget {
 class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
-    HomeScreen(),
-    Center(child: Text("Home1")),
+    Center(child: Text("Home0")),
+    ExploreScreen(),
     Center(child: Text("Home2")),
     Center(child: Text("Home3")),
     Center(child: Text("Home4")),

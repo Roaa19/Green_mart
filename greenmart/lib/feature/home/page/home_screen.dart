@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:greenmart/core/constans/app_image.dart';
+import 'package:greenmart/core/functions/navigation.dart';
 import 'package:greenmart/core/style/color.dart';
 import 'package:greenmart/core/widget/text_field.dart';
-import 'package:greenmart/feature/home/data/dummy_data.dart';
 import 'package:greenmart/feature/home/widget/all_product.dart';
 import 'package:greenmart/feature/home/widget/best_selling.dart';
-import 'package:greenmart/feature/home/widget/item_card.dart';
 import 'package:greenmart/feature/home/widget/offers.dart';
+import 'package:greenmart/feature/search/search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -32,11 +32,17 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              AppTextField(prefixIcon: Icon(Icons.search) ,hintText: "Search"),
+              GestureDetector(
+                onTap: () {
+                  pushTo(context, SearchScreen());
+                },
+                child: AppTextField(prefixIcon: Icon(Icons.search) ,hintText: "Search")),
+              
               OffersBuilder(),
               BestSellingBuilder(),
-              AllProductsBuilder()
-            ],
+              AllProductsBuilder(),
+              ],
+            
           ),
         ),
       ),

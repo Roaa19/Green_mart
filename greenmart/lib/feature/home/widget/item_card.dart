@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/core/style/color.dart';
+import 'package:greenmart/core/style/text_style.dart';
 import 'package:greenmart/feature/home/data/product_model.dart';
 
 class ItemCard extends StatelessWidget {
@@ -36,19 +37,19 @@ class ItemCard extends StatelessWidget {
             SizedBox(height: 10),
             Text(
               model.name,
-              //style: TextStyles.body.copyWith(fontWeight: FontWeight.w600),
+              style: TextStyles.body.copyWith(fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 6),
             Text(
               model.quantityForPrice,
-              //style: TextStyles.caption2.copyWith(color: AppColors.greyColor),
+              style: TextStyles.caption2.copyWith(color: AppColor.grey),
             ),
             SizedBox(height: 16),
             Row(
               children: [
                 Text(
                   '\$${model.price}',
-                //  style: TextStyles.body.copyWith(fontWeight: FontWeight.w600),
+                  style: TextStyles.body.copyWith(fontWeight: FontWeight.w600),
                 ),
                 Spacer(),
                 FloatingActionButton.small(

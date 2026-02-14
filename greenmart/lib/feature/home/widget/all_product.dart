@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greenmart/core/style/text_style.dart';
 import 'package:greenmart/feature/home/data/dummy_data.dart';
 import 'package:greenmart/feature/home/widget/item_card.dart';
 
@@ -12,7 +13,7 @@ class AllProductsBuilder extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text('All Products'),
+            Text('All Products',style: TextStyles.title),
             Spacer(),
             TextButton(
               onPressed: () {},
@@ -21,8 +22,6 @@ class AllProductsBuilder extends StatelessWidget {
           ],
         ),
         GridView.builder(
-          physics: NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 10,
