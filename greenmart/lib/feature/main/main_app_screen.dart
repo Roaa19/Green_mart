@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:greenmart/core/constans/app_image.dart';
 import 'package:greenmart/core/style/color.dart';
-import 'package:greenmart/feature/home/home_screen.dart';
+import 'package:greenmart/feature/home/page/home_screen.dart';
 
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
