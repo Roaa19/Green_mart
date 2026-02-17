@@ -7,7 +7,7 @@ import 'package:greenmart/core/widget/text_field.dart';
 import 'package:greenmart/feature/home/widget/all_product.dart';
 import 'package:greenmart/feature/home/widget/best_selling.dart';
 import 'package:greenmart/feature/home/widget/offers.dart';
-import 'package:greenmart/feature/search/search_screen.dart';
+import 'package:greenmart/feature/search/page/search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

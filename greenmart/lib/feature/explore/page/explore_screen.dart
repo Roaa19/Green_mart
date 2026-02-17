@@ -3,8 +3,8 @@ import 'package:greenmart/core/functions/navigation.dart';
 import 'package:greenmart/core/style/text_style.dart';
 import 'package:greenmart/core/widget/text_field.dart';
 import 'package:greenmart/feature/explore/data/dummy_data.dart';
-import 'package:greenmart/feature/explore/widget/Category_card.dart';
-import 'package:greenmart/feature/search/search_screen.dart';
+import 'package:greenmart/feature/explore/widget/category_card.dart';
+import 'package:greenmart/feature/search/page/search_screen.dart';
 
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
@@ -23,7 +23,9 @@ class ExploreScreen extends StatelessWidget {
               onTap: () {
                 pushTo(context, SearchScreen());
               },
-              child: AppTextField(prefixIcon: Icon(Icons.search),hintText: "serach store",enabled: false)),
+              child: Hero(
+                tag: 'search',
+                child: Material(child: AppTextField(prefixIcon: Icon(Icons.search),hintText: "serach store",enabled: false)))),
             SizedBox(height: 20),
             Expanded(
               child: GridView.builder(
@@ -34,9 +36,9 @@ class ExploreScreen extends StatelessWidget {
                   mainAxisExtent: 200
                   ),
                 itemBuilder: (context,index){
-                  return CategoryCard(category: category[index]);
+                  return CategoryCard(category: categoryItems[index]);
                 },
-                itemCount: category.length,
+                itemCount: categoryItems.length,
                 ),
             )
           ],

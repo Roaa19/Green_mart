@@ -2,7 +2,7 @@ import 'package:greenmart/core/constans/app_image.dart';
 import 'package:greenmart/core/style/color.dart';
 import 'package:greenmart/feature/explore/data/category.dart';
 
-List<CategoryModel> category = [
+List<CategoryModel> categoryItems = [
   CategoryModel(id: '1', image: AppImage.fruits, title: 'Fresh Fruits & Vegetables',color: AppColor.card1),
   
   CategoryModel(id: '2', image: AppImage.oil, title: 'Cooking Oil',color: AppColor.card2),

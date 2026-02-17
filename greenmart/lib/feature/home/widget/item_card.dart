@@ -8,6 +8,15 @@ class ItemCard extends StatelessWidget {
 
   final ProductModel model;
 
+  Widget buildImage(String path) {
+  if (path.startsWith('http')) {
+    return Image.network(path);
+  } else {
+    return Image.asset(path);
+  }
+}
+
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -33,7 +42,7 @@ class ItemCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(child: Center(child: Image.network(model.image))),
+            Expanded(child: Center(child: buildImage(model.image))),
             SizedBox(height: 10),
             Text(
               model.name,
