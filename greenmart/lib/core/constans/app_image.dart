@@ -1,5 +1,7 @@
 class AppImage {
   static const String splashLogo = 'assets/image/splash_logo.svg';
+  static const String welcome = 'assets/image/welcome.png';
+  
   static const String logo = 'assets/image/logo.svg';
   static const String heartSvg = 'assets/icons/heart.svg';
   static const String searchSvg = 'assets/icons/search.svg';
@@ -25,4 +27,17 @@ class AppImage {
   static const String acceptedSvg = 'assets/image/accepted.svg';
   static const String cardSvg = 'assets/image/card.svg';
   static const String profileSvg = 'assets/image/profile.svg';
+
+  
+  static const String ordersSvg = 'assets/image/orders.svg';
+  static const String detailsSvg = 'assets/image/details.svg';
+  static const String addSvg = 'assets/image/add.svg';
+  static const String paymentSvg = 'assets/image/payment.svg';
+  static const String promoSvg = 'assets/image/promo_code.svg';
+  static const String notificationSvg = 'assets/image/notification.svg';
+  static const String helpSvg = 'assets/image/help.svg';
+  static const String aboutSvg = 'assets/image/about.svg';
+  static const String logoutSvg = 'assets/image/log_out.svg';
+  
+  
 }

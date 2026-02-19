@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/core/style/color.dart';
+import 'package:greenmart/feature/intro/splash_screen.dart';
+import 'package:greenmart/feature/intro/welcome_screen.dart';
 import 'package:greenmart/feature/main/main_app_screen.dart';
 
 void main() {
@@ -21,7 +23,7 @@ class MainApp extends StatelessWidget {
         )
       ),
       debugShowCheckedModeBanner: false,
-      home: const Scaffold(body: Center(child: MainAppScreen())),
+      home: const Scaffold(body: Center(child: SplashScreen())),
     );
   }
 }

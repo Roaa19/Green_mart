@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:greenmart/core/functions/navigation.dart';
 import 'package:greenmart/core/style/color.dart';
 import 'package:greenmart/core/widget/main_button.dart';
 import 'package:greenmart/feature/auth/page/mobile_number.dart';
+import 'package:greenmart/feature/main/main_app_screen.dart';
 import 'package:pinput/pinput.dart';
 
 class VerificationScreen extends StatefulWidget {
@@ -67,7 +69,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   ),
                 ),
                 SizedBox(height: 16),
-                MainButton(text: "Confirm", onPressed: () {}),
+                MainButton(text: "Confirm", onPressed: () {pushReplacement(context, MainAppScreen());}),
                 SizedBox(height: 16),
                 Align(
                   child: Text(

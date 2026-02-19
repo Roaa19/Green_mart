@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:greenmart/core/constans/app_image.dart';
 import 'package:greenmart/core/style/color.dart';
 import 'package:greenmart/feature/auth/page/login.dart';
+import 'package:greenmart/feature/intro/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(seconds: 3), (){
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => LoginScreen()));
+        MaterialPageRoute(builder: (context) => WelcomeScreen()));
     });
     super.initState();
   }
