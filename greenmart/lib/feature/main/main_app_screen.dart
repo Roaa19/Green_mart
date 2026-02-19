@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:greenmart/core/constans/app_image.dart';
 import 'package:greenmart/core/style/color.dart';
+import 'package:greenmart/feature/card/page/cart_screen.dart';
 import 'package:greenmart/feature/explore/page/explore_screen.dart';
-import 'package:greenmart/feature/home/page/home_screen.dart';
+import 'package:greenmart/feature/favorite/favorite_screen.dart';
+import 'package:greenmart/feature/profile/profile_screen.dart';
 
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
@@ -17,9 +19,9 @@ class _MainAppScreenState extends State<MainAppScreen> {
   List<Widget> screens = [
     Center(child: Text("Home0")),
     ExploreScreen(),
-    Center(child: Text("Home2")),
-    Center(child: Text("Home3")),
-    Center(child: Text("Home4")),
+    CartScreen(),
+    FavoriteScreen(),
+    ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {

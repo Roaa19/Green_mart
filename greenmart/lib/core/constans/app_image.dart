@@ -21,4 +21,8 @@ class AppImage {
   static const String pepsi = 'assets/image/pepsi.png';
   static const String orange = 'assets/image/orange_juice.png';
   static const String appleGrape = 'assets/image/apple_grape_juice.png';
+
+  static const String acceptedSvg = 'assets/image/accepted.svg';
+  static const String cardSvg = 'assets/image/card.svg';
+  static const String profileSvg = 'assets/image/profile.svg';
 }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:greenmart/core/functions/navigation.dart';
 import 'package:greenmart/core/style/color.dart';
 import 'package:greenmart/core/style/text_style.dart';
+import 'package:greenmart/core/widget/build_image.dart';
+import 'package:greenmart/feature/details/page/details_screen.dart';
 import 'package:greenmart/feature/home/data/product_model.dart';
 
 class ItemCard extends StatelessWidget {
@@ -8,20 +11,13 @@ class ItemCard extends StatelessWidget {
 
   final ProductModel model;
 
-  Widget buildImage(String path) {
-  if (path.startsWith('http')) {
-    return Image.network(path);
-  } else {
-    return Image.asset(path);
-  }
-}
 
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        //pushTo(context, DetailsScreen(model: model));
+        pushTo(context, DetailsScreen(model: model));
       },
       child: Container(
         width: 160,
@@ -42,7 +38,7 @@ class ItemCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(child: Center(child: buildImage(model.image))),
+            Expanded(child: Center(child: BuildImage(path: model.image))),
             SizedBox(height: 10),
             Text(
               model.name,

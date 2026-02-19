@@ -12,13 +12,16 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(colorScheme:  ColorScheme.fromSeed(seedColor: AppColor.primaryColor),fontFamily: 'Poppins'),
-      debugShowCheckedModeBanner: false,
-      home: const Scaffold(
-        body: Center(
-          child: MainAppScreen(),
-        ),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primaryColor),
+        fontFamily: 'Poppins',
+        appBarTheme: AppBarTheme(
+          elevation: 0,
+          scrolledUnderElevation: 0,
+        )
       ),
+      debugShowCheckedModeBanner: false,
+      home: const Scaffold(body: Center(child: MainAppScreen())),
     );
   }
 }
